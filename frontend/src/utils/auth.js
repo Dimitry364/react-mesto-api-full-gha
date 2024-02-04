@@ -7,9 +7,6 @@ function checkResponse(res) {
 }
 
 export function registerUser({email, password}) {
-    console.log(email);
-    console.log(password);
-    console.log(JSON.stringify({ email, password }));
   return fetch(`${BASE_URL}/signup`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
