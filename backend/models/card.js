@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const { regExpUrlAvatar } = require("../utils/regExp");
+const mongoose = require('mongoose');
+const { regExpUrlAvatar } = require('../utils/regExp');
 
 const cardSchema = new mongoose.Schema({
   name: {
@@ -12,7 +12,7 @@ const cardSchema = new mongoose.Schema({
     type: String,
     required: true,
     validate: {
-      validator: function (v) {
+      validator(v) {
         return regExpUrlAvatar.test(v);
       },
 
@@ -21,13 +21,13 @@ const cardSchema = new mongoose.Schema({
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "user",
+    ref: 'user',
     required: true,
   },
   likes: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "user",
+      ref: 'user',
       default: [],
     },
   ],
@@ -37,4 +37,4 @@ const cardSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("card", cardSchema);
+module.exports = mongoose.model('card', cardSchema);

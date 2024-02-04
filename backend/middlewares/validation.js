@@ -1,15 +1,14 @@
-const { celebrate, Joi } = require("celebrate");
-const isUrl = require("validator/lib/isURL");
-const BadRequestError = require("../errors/BadRequestError");
-const { regExpUrlAvatar } = require("../utils/regExp");
+const { celebrate, Joi } = require('celebrate');
+const isUrl = require('validator/lib/isURL');
+const BadRequestError = require('../errors/BadRequestError');
+const { regExpUrlAvatar } = require('../utils/regExp');
 
 const validationUrl = (url) => {
   const validate = isUrl(url);
 
-  if (validate)
-    return url;
+  if (validate) return url;
 
-  throw new BadRequestError("Некорректный адрес URL");
+  throw new BadRequestError('Некорректный адрес URL');
 };
 
 const loginValidator = celebrate({
