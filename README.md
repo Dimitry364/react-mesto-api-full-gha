@@ -54,7 +54,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.143.162
+IP-адрес <158.160.143.162>
 
 Frontend https://yarushkin.practicum.nomoredomainsmonster.ru/
 
