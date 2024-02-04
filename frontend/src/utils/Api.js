@@ -48,7 +48,7 @@ class Api {
   }
 
   likeCard(cardId, isLiked) {
-    return this._request(this._baseUrl + "/cards/likes/" + cardId, {
+    return this._request(this._baseUrl + `/cards/${cardId}/likes/`, {
       method: isLiked ? "DELETE" : "PUT",
       headers: this._getHeaders(),
     });
