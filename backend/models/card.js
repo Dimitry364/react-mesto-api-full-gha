@@ -1,3 +1,5 @@
+/* eslint-disable object-shorthand */
+/* eslint-disable func-names */
 const mongoose = require('mongoose');
 const { regExpUrlAvatar } = require('../utils/regExp');
 
@@ -12,7 +14,7 @@ const cardSchema = new mongoose.Schema({
     type: String,
     required: true,
     validate: {
-      validator(v) {
+      validator: function (v) {
         return regExpUrlAvatar.test(v);
       },
 

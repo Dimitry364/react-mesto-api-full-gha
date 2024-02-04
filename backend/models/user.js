@@ -1,3 +1,5 @@
+/* eslint-disable object-shorthand */
+/* eslint-disable func-names */
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const isEmail = require('validator/lib/isEmail');
@@ -23,7 +25,7 @@ const userSchema = new mongoose.Schema(
         'https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png',
       type: String,
       validate: {
-        validator(v) {
+        validator: function (v) {
           return regExpUrlAvatar.test(v);
         },
 
@@ -55,7 +57,6 @@ const userSchema = new mongoose.Schema(
   },
 );
 
-// eslint-disable-next-line func-names
 userSchema.statics.findUserByCredentials = function (email, password) {
   return this.findOne({ email })
     .select('+password')
