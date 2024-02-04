@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 const mongoose = require('mongoose');
 const Card = require('../models/card');
 const NotFoundError = require('../errors/NotFoundError');
@@ -5,7 +6,7 @@ const ForbiddenError = require('../errors/ForbiddenError');
 const BadRequestError = require('../errors/BadRequestError');
 const { Created } = require('../utils/statusCode');
 
-const { CastError } = mongoose.Error;
+const { CastError } = mongoose.Error.CastError;
 const { ValidationError } = mongoose.Error.ValidationError;
 
 const getCards = (req, res, next) => {
@@ -40,7 +41,7 @@ const deleteCard = (req, res, next) => {
   Card.findById(cardId)
     .orFail(() => new NotFoundError('Карточка не найдена'))
     .then((card) => {
-      if (card.owner !== ownerId) throw new ForbiddenError('Доступ запрещен');
+      if (card.owner != ownerId) throw new ForbiddenError('Доступ запрещен');
 
       return card;
     })
