@@ -1,0 +1,18 @@
+.profile__info {
+    max-width: 336px;
+    display: flex;
+    row-gap: 16px;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1279px) {
+    .profile__info {
+        max-width: calc((100vw - 320px) / (1279 - 320) * (336 - 282) + 282px);
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .profile__info {
+        row-gap: 8px;
+    }
+}

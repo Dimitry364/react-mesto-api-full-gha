@@ -1,0 +1,15 @@
+.login__title {
+  margin: 60px auto 50px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1279px) {
+  .login__title {
+    margin: calc((100vw - 320px) / (1020 - 320) * (60 - 40) + 40px) auto
+      calc((100vw - 320px) / (1279 - 320) * (50 - 30) + 30px);
+    font-size: calc((100vw - 320px) / (1279 - 320) * (24 - 20) + 20px);
+    line-height: calc((100vw - 320px) / (1279 - 320) * (29 - 24) + 24px);
+  }
+}

@@ -1,0 +1,18 @@
+.popup__message {
+  max-width: 358px;
+  margin: 0 auto 60px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+  text-align: center;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1279px) {
+  .popup__message {
+    max-width: calc((100vw - 320px) / (1279 - 320) * (358 - 244) + 244px);
+    margin: 0 auto calc((100vw - 320px) / (1279 - 320) * (60 - 50) + 50px);
+    font-size: calc((100vw - 320px) / (1279 - 320) * (24 - 20) + 20px);
+    line-height: calc((100vw - 320px) / (1279 - 320) * (29 - 24) + 24px);
+  }
+}

@@ -1,0 +1,14 @@
+.popup__status {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  padding: 60px 155px 32px;
+}
+
+@media screen and (max-width: 1279px) {
+    .popup__status {
+      padding: calc((100vw - 320px) / (1280 - 320) * (60 - 50) + 50px)
+        calc((100vw - 320px) / (1280 - 320) * (155 - 80) + 80px)
+        calc((100vw - 320px) / (1280 - 320) * (32 - 38) + 38px);
+  }
+}

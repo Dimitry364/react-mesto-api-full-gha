@@ -1,0 +1,11 @@
+.content {
+    margin-top: 40px;
+    margin-bottom: 66px;
+}
+
+@media screen and (max-width: 1279px) {
+    .content {
+        margin-top: calc((100vw - 320px) / (1279 - 320) * (40 - 42) + 42px);
+        margin-bottom: calc((100vw - 320px) / (1020 - 320) * (66 - 48) + 48px);
+    }
+}
