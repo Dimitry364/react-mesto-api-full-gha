@@ -1,8 +1,7 @@
 const allowedCors = [
-  "https://yarushkin.practicum.nomoredomainsmonster.ru/",
-  "http://yarushkin.practicum.nomoredomainsmonster.ru/",
+  "https://yarushkin.practicum.nomoredomainsmonster.ru",
+  "http://yarushkin.practicum.nomoredomainsmonster.ru",
   "http://localhost:3000",
-  "localhost:3000",
 ];
 
 module.exports = (req, res, next) => {
